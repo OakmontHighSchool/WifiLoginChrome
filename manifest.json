@@ -6,12 +6,12 @@
   "version": "1.0",
 
   "permissions": [
-    "https://secure.flickr.com/"
+    "http://127.0.0.1/*" //TODO: This should be the login page
   ],
   
   "content_scripts": [
     {
-      "matches": ["http://127.0.0.1/*"], //This should be the login page
+      "matches": ["http://127.0.0.1/*"], //TODO: This should be the login page
       "js": ["jquery.js","login.js"]
     }
   ],
