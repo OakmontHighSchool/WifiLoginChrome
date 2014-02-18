@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "OHS Wifi Login",
+  "description": "This extension automagically logs into the school's wifi.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://secure.flickr.com/"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["http://127.0.0.1/*"], //This should be the login page
+      "js": ["jquery.js","login.js"]
+    }
+  ],
+}
