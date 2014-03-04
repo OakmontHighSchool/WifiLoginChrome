@@ -1,18 +1,19 @@
 {
-  "manifest_version": 2,
-
-  "name": "OHS Wifi Login",
-  "description": "This extension automagically logs into the school's wifi.",
-  "version": "1.0",
-
-  "permissions": [
-    "http://127.0.0.1/*" //TODO: This should be the login page
-  ],
-  
-  "content_scripts": [
-    {
-      "matches": ["http://127.0.0.1/*"], //TODO: This should be the login page
-      "js": ["jquery.js","login.js"]
-    }
-  ],
+	"manifest_version": 2,
+	
+	"name": "OHS Chrome Extension",
+	"description": "This extension auto-logs you into the OHS school wifi.",
+	"version": "1.0",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"webRequest",
+		"background",
+		"webRequestBlocking",
+		"*://172.31.0.2/*"
+	],
+	"browser_action": {
+		"default_icon": "icon.png"
+  }
 }
