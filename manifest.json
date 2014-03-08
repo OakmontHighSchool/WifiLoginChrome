@@ -4,6 +4,7 @@
 	"name": "OHS Chrome Extension",
 	"description": "This extension auto-logs you into the OHS school wifi.",
 	"version": "1.0",
+	"options_page":"options.html",
 	"content_scripts": [{
 		"matches": ["*://172.31.0.2/*"],
 		"js": ["jquery.js", "contentLogin.js"]
